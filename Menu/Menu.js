@@ -11,7 +11,9 @@ let menuItems = [
 
 
 
-const menu = document.querySelector('.menu'); 
+function createMenu(menuItems){
+document.createElement ('div');
+}
 // Step 1: Write a function that will create a menu component as seen below:
 // /* <div class="menu">
 //     <ul>

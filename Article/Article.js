@@ -119,49 +119,49 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
 
 const article = document.createElement('div');
 const articleTitle = document.createElement('h2');
+articleTitle.textContent = title
 const articleDate = document.createElement('p');
+articleDate.textContent = date
 const Para1 = document.createElement('p');
+Para1.textContent = firstParagraph
 const Para2 = document.createElement('p');
+Para2.textContent = secondParagraph
 const Para3 = document.createElement('p');
+Para3.textContent = thirdParagraph
 const expandButton = document.createElement('span');
+expandButton.textContent = 'Hello'
 
 // setup structure of elements
 
-article.appendChild('articleTitle')
-article.appendChild('articleDate')
-article.appendChild('Para1')
-article.appendChild('Para2')
-article.appendChild('Para3')
-article.appendChild('expandButton')
+article.appendChild(articleTitle)
+article.appendChild(articleDate)
+article.appendChild(Para1)
+article.appendChild(Para2)
+article.appendChild(Para3)
+article.appendChild(expandButton)
 
 // set class names
 article.classList.add('article')
 article.classList.add('articles')
 article.classList.add('date')
-// article.classList.add('expandButton')
+expandButton.classList.add('expandButton')
 
 // set text content
 
-article.textContent = 'article-open'
-article.textContent = 'close'
-article.textContent = 'date'
-article.textContent = 'title'
+
 
 
 // add event listener
-articleButton.addEventListener('click', () => {
+expandButton.addEventListener('mouseover', function toggle(event){
   article.classList.toggle('article-open')
 })
-
 return article;
 }
 
+const articles = document.querySelector('.articles')
+data.forEach(function (lambdadata){
+  const article = createArticle(lambdadata.title, lambdadata.date, lambdadata.firstParagraph, lambdadata.secondParagraph, lambdadata.thirdParagraph )
+  articles.appendChild(article)
+})
 
 
-
-
-
-
-
-
-}
