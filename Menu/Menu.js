@@ -9,15 +9,19 @@ let menuItems = [
   'Log Out'
 ];
 
+
+
+const menu = document.querySelector('.menu'); 
+// Step 1: Write a function that will create a menu component as seen below:
+// /* <div class="menu">
+//     <ul>
+//       {each menu item as a list item}
+//     </ul>
+//   </div> */
+
 /* 
 
-  Step 1: Write a function that will create a menu component as seen below:
-
-  <div class="menu">
-    <ul>
-      {each menu item as a list item}
-    </ul>
-  </div>
+  
 
   Pass the function an array as it's only argument.
 
