@@ -129,7 +129,7 @@ Para2.textContent = secondParagraph
 const Para3 = document.createElement('p');
 Para3.textContent = thirdParagraph
 const expandButton = document.createElement('span');
-expandButton.textContent = 'Hello'
+expandButton.textContent = 'Click Here'
 
 // setup structure of elements
 

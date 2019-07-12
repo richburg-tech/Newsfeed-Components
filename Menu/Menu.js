@@ -11,9 +11,34 @@ let menuItems = [
 
 
 
-function createMenu(menuItems){
-document.createElement ('div');
+function menuComponent (menuItems){
+const menu = document.createElement ('div');
+menu.classList.add('menu');
+const ul = document.createElement('ul');
+menu.appendChild(ul); 
+const li = {}
+
+menuItems.forEach((menuItems, i )=> {
+  console.log(menuItems)
+ li[i]= document.createElement('li');
+li[i].textContent=menuItems; 
+ul.appendChild(li[i]);
+});
+
+const menuButton = document.querySelector('.menu-button');
+
+console.log('menu-button', menuButton)
+menuButton.addEventListener('click', () => {
+  console.log('click')
+  menu.classList.toggle('menu--open');
+});
+
+return menu;
 }
+
+const menu = menuComponent(menuItems);
+const header = document.querySelector('.header');
+header.appendChild(menu);
 // Step 1: Write a function that will create a menu component as seen below:
 // /* <div class="menu">
 //     <ul>
